@@ -1,7 +1,9 @@
 import user from '../user.json'
 import data from '../data.json'
+import friends from '../friends.json'
 import Profile from './Profile/profile'
 import Statistics from './Statistics/statistics'
+import FriendList from './Friends/friendList'
 
 export const App = () => {
   return (
@@ -27,17 +29,30 @@ export const App = () => {
         />
       </div>
       <div
-      style={{
-          height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101'
-        }} >
-        <Statistics
-          title="dratuti"
-          stats={data} />
+        style={{
+            height: '100vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            fontSize: 40,
+            color: '#010101'
+          }} >
+          <Statistics
+            title="dratuti"
+            stats={data} />
+      </div>
+      <div
+        style={{
+            height: '100vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            fontSize: 40,
+            color: '#010101'
+          }} >
+        <FriendList
+          friends={friends}
+        />
       </div>
     </div>
   );
