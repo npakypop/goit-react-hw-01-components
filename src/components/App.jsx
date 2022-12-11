@@ -36,7 +36,7 @@ export const App = () => {
           color: '#010101'
         }} >
         <Statistics
-          title='dratuti'
+          title="dratuti"
           stats={data} />
       </div>
     </div>

@@ -1,5 +1,5 @@
-export default function Title(title) { 
+export default function Title({title}) { 
     return (
-        <h2 className="title">{ title && "Upload stats"}</h2>    
+        <h2 className="title">{title}</h2>
     )
 }
