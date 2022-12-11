@@ -1,24 +1,20 @@
-export default function Statistics({ title = '', lable, percentage }) {
-    <section className="statistics">
-        <h2 className="title">{ title && "Upload stats"}</h2>
+import Stats from '../Stats/stats'
+import Title from '../Title/title'
 
+export default function Statistics({ title = '', stats }) {
+   return( <section className="statistics">
+        <Title
+            title={title.title}
+        />
         <ul className="stat-list">
-            <li className="item">
-                <span className="label">{lable}</span>
-                <span className="percentage">{percentage}</span>
-            </li>
-            <li className="item">
-                <span className="label">{lable}</span>
-                <span className="percentage">{percentage}</span>
-            </li>
-            <li className="item">
-                <span className="label">{lable}</span>
-                <span className="percentage">{percentage}</span>
-            </li>
-            <li className="item">
-                <span className="label">{lable}</span>
-                <span className="percentage">{percentage}</span>
-            </li>
+            {stats.map(el =>(
+                <li className="item" key={el.id}>   
+                    <Stats
+                        label={el.label}
+                        percentage={el.percentage}
+                    />
+                </li>
+            ))}
         </ul>
     </section>
-}
+)}
