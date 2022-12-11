@@ -10,14 +10,23 @@ export default function Statistics({ title, stats }) {
                 />
             }
             <ul className="stat-list">
-                {stats.map(el =>(
-                    <li className="item" key={el.id}>   
-                        <Stats
-                            label={el.label}
-                            percentage={el.percentage}
-                        />
-                    </li>
+                {stats.map(el =>(   
+                    <Stats
+                        key={el.id}
+                        label={el.label}
+                        percentage={el.percentage}
+                    />
                 ))}
             </ul>
         </section>
 )}
+            // <ul className="stat-list">
+            //     {stats.map(el =>(
+            //         <li className="item" key={el.id}>   
+            //             <Stats
+            //                 label={el.label}
+            //                 percentage={el.percentage}
+            //             />
+            //         </li>
+            //     ))}
+            // </ul>
