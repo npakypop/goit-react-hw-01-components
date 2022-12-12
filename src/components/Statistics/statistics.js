@@ -20,6 +20,7 @@ export default function Statistics({ title, stats }) {
             </ul>
         </section>
 )}
+
             // <ul className="stat-list">
             //     {stats.map(el =>(
             //         <li className="item" key={el.id}>   
