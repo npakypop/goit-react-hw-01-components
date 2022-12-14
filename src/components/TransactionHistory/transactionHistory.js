@@ -1,6 +1,6 @@
 import Transaction from './trasaction';
 
-export default function TransactionHistory({transactions}) {
+export default function TransactionHistory({ transactions }) {
   return (
     <table className="transaction-history">
       <thead>
@@ -11,16 +11,15 @@ export default function TransactionHistory({transactions}) {
         </tr>
       </thead>
       <tbody>
-              {transactions.map(el =>                 
-                  <Transaction
-                      key={el.id}
-                      type={el.type}
-                      amount={el.amount}
-                      currency={el.currency}
-                  />
-                )}
+        {transactions.map(el => (
+          <Transaction
+            key={el.id}
+            type={el.type}
+            amount={el.amount}
+            currency={el.currency}
+          />
+        ))}
       </tbody>
     </table>
   );
 }
-

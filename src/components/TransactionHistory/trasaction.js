@@ -9,7 +9,7 @@ export default function Transaction({type, amount, currency}) {
     )
 }
 Transaction.propTypes = {
-  amount: PropTypes.string,
-  currency: PropTypes.string,
-  type: PropTypes.string
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired
 }
