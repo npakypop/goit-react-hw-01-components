@@ -1,3 +1,4 @@
+// import PropTypes from "prop-types"
 import Stats from '../Stats/stats'
 import Title from '../Title/title'
 import css from './statistics.module.css'
@@ -10,25 +11,21 @@ export default function Statistics({ title, stats }) {
                     title={title}
                 />
             }
-            <ul className={css.stats__list}>
-                {stats.map(el =>(   
+            <ul className={css.statsList}>
+                {stats.map(({id, label, percentage}) =>(   
                     <Stats
-                        key={el.id}
-                        label={el.label}
-                        percentage={el.percentage}
+                        key={id}
+                        label={label}
+                        percentage={percentage}
                     />
                 ))}
             </ul>
         </section>
 )}
 
-            // <ul className="stat-list">
-            //     {stats.map(el =>(
-            //         <li className="item" key={el.id}>   
-            //             <Stats
-            //                 label={el.label}
-            //                 percentage={el.percentage}
-            //             />
-            //         </li>
-            //     ))}
-            // </ul>
+// Statistics.propTypes = {
+//   stats: PropTypes.shape({
+//     map: PropTypes.func
+//   }),
+//   title: PropTypes.any
+// }

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import css from './stats.module.css'
+
 export default function Stats({ label, percentage }) {
     return (
         <li className={css.item}>  
@@ -8,7 +9,8 @@ export default function Stats({ label, percentage }) {
         </li>
     )
 }
+
 Stats.propTypes = {
-  label: PropTypes.string,
-  percentage: PropTypes.number
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired
 }

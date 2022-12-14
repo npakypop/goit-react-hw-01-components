@@ -1,8 +1,9 @@
 import PropTypes from "prop-types"
 import css from './friend.module.css'
+
 export default function Friend({ avatar, name, isOnline}) { 
     return (
-        <li className={css.friends__item}>
+        <li className={css.friendsItem}>
             {/* <span className={css.status}>{ isOnline ? "is Online" : "ïs Offline"}</span> */}
             <span className={`${css.status} ${css[isOnline]}` }></span>
             <img className={css.avatar} src={ avatar } alt={ name } width="48" />
@@ -10,8 +11,9 @@ export default function Friend({ avatar, name, isOnline}) {
         </li>
     )
 }
+
 Friend.propTypes = {
-  avatar: PropTypes.string,
-  isOnline: PropTypes.bool,
-  name: PropTypes.string
+  avatar: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired
 }

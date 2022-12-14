@@ -1,13 +1,16 @@
 import PropTypes from "prop-types"
+import css from './transaction.module.css'
+
 export default function Transaction({type, amount, currency}) {
     return (
-        <tr>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
+        <tr className={css.tableRow}>
+            <td className={css.column}>{type}</td>
+            <td className={css.column}>{amount}</td>
+            <td className={css.column}>{currency}</td>
         </tr>
     )
 }
+
 Transaction.propTypes = {
   amount: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,

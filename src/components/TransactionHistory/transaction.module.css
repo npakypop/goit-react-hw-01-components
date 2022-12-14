@@ -1,0 +1,7 @@
+.column{
+    text-align: center;
+    padding: 5px 10px;
+}
+.tableRow:nth-child(even){
+    background-color: brown;
+}
