@@ -48,3 +48,12 @@ img {
   align-items: center;
   background-color: grey;
 }
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

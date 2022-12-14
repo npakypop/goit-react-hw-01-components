@@ -1,15 +1,16 @@
 import Stats from '../Stats/stats'
 import Title from '../Title/title'
+import css from './statistics.module.css'
 
 export default function Statistics({ title, stats }) {
     return (
-        <section className="statistics">
+        <section className={css.statistics}>
             {title && 
                 <Title
                     title={title}
                 />
             }
-            <ul className="stat-list">
+            <ul className={css.stats__list}>
                 {stats.map(el =>(   
                     <Stats
                         key={el.id}
