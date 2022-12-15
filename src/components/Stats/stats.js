@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import css from './stats.module.css'
+import css from './Stats.module.css'
 
 export default function Stats({ label, percentage }) {
     return (

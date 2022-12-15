@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
-import Stats from '../Stats/stats'
-import Title from '../Title/title'
-import css from './statistics.module.css'
+import Stats from '../Stats/Stats'
+import Title from '../Title/Title'
+import css from './Statistics.module.css'
 
 export default function Statistics({ title, stats }) {
     return (

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import css from './friend.module.css'
+import css from './Friend.module.css'
 
 export default function Friend({ avatar, name, isOnline}) { 
     return (
