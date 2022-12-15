@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import Friend from '../Friend/friend'
+import Friend from '../Friend/Friend'
 import css from './friendList.module.css'
 
 export default function FriendList({friends}) { 
