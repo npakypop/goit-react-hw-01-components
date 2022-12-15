@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types"
+import PropTypes from "prop-types"
 import Stats from '../Stats/stats'
 import Title from '../Title/title'
 import css from './statistics.module.css'
@@ -23,9 +23,14 @@ export default function Statistics({ title, stats }) {
         </section>
 )}
 
-// Statistics.propTypes = {
-//   stats: PropTypes.shape({
-//     map: PropTypes.func
-//   }),
-//   title: PropTypes.any
-// }
+
+Statistics.propTypes = {
+    title: PropTypes.string.isRequired,
+    stats: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired,
+            id: PropTypes.string.isRequired,
+        }).isRequired
+    ).isRequired
+}
